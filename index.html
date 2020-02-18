@@ -2,96 +2,116 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-    <title>Assignment #2</title>
-    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
-    <script type="text/javascript" src="data.json"></script>
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
 </head>
 <body>
-    <div style="height: 100vh; align-items: center; justify-content: space-around" class="ui two colomn container">
-            <h1 align="center">Assignment #2</h1>
-            <p>
-                Construct a webpage (HTML, CSS, JS6/CoffeeScript/TypeScript) that splits some objects read from a resource file into random groups of size N and displays the groups within a table. You can choose the type of the resource file, e.g. JSON, Lines of text, CSV, or TSV, the user should be able to specify the groups of size N conveniently, i.e either select it from a dropdown list or type it in. While a random set of groups should be presented to the user initially,  the user should be able to make a new set of groups at any time. Your code has to clearly outline who was the author for each portion of the code. Upload your app to one group member's UH account.
-            </p>
-        <div
-            <div class="ui inverted segment">
-                <form class="ui inline form" id="group-form">
-                    <h4 class="ui inverted dividing header">Group Generator</h4>
-                    <div class="field">
-                        <label><font color="white">Group Size</font></label>
-                        <div class="ui action input">
-                            <input type="number" name="size" id="size" value="5" min="1">
-
-                            <div class="ui inverted teal basic button" onclick="makeGroups()">Generate Groups</div>
-                        </div>
+    <div class="ui container">
+        <img class="ui centered image fluid" src="https://www.hawaii.edu/campuscenter/images/header.gif"
+             alt="UH Manoa Campus Center" style="border: 0;">
+        <div class="padding-top-reduction">
+            <div class="ui borderless middlemenu menu">
+                <div class="ui centered grid container">
+                    <div class="ui dropdown item">
+                        <div class="text">THE CENTER</div>
                     </div>
-                </form>
+                    <div class="ui dropdown item">
+                        <div class="text">SERVICES</div>
+                    </div>
+                    <div class="ui dropdown  item">
+                        <div class="text">VENDORS</div>
+                    </div>
+                    <div class="ui dropdown item">
+                        <div class="text">ORGANIZATIONS</div>
+                    </div>
+                    <div class="ui dropdown item">
+                        <div class="text">LINKS</div>
+                    </div>
+                </div>
             </div>
-            <table class="ui inverted celled table">
-                <thead>
-                    <tr><th class="three wide">Group Number</th>
-                    <th>Group Members</th></tr>
-                </thead>
-                <tbody id="groups">
-                    <tr><td>Name</td>
-                    <td>Value</td></tr>
-                </tbody>
-            </table>
+        </div>
+
+        <div class="ui two column grid">
+            <div class="column">
+                <img class="ui image" src="https://www.hawaii.edu/campuscenter/welcome.jpg"
+                     alt="UH Manoa Campus Center" style="border: 0;">
+                <p>
+                    Campus Center Complex is the student union of the University of Hawai`i at Manoa.
+                    <br /><br />
+                    The student union offers the university community and the public a wide variety
+                    of meeting, dining and entertainment options to enrich campus life and the educational
+                    experience. Campus Center, located in the heart of the University, strives to meet the
+                    co-curricular needs and interests of the University community by utilizing the Campus
+                    Center Complex (Campus Center, Hemenway Hall and the Warrior Recreation Center) as the
+                    primary venue for programs and events to create an environment where individuals can
+                    come and relax, study and be entertained or challenged. Campus Center Complex affects
+                    the quality of life on campus by the variety of co-curricular programs it provides.
+                    <br /><br />
+                    Please come and visit us!!!
+                </p>
+            </div>
+            <div class="column">
+                <img class="ui centered image" src="https://www.hawaii.edu/campuscenter/slideimages/1.JPG"
+                     alt="UH Manoa Campus Center" style="border: 0;">
+            </div>
+        </div>
+
+        <div align="center">
+            <h1 class="ui huge header">Campus Center Computer Lab</h1>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <p>
+                    Campus Center Complex is the student union of the University of Hawai`i at Manoa.
+                    <br /><br />
+                    The student union offers the university community and the public a wide variety
+                    of meeting, dining and entertainment options to enrich campus life and the educational
+                    experience. Campus Center, located in the heart of the University, strives to meet the
+                    co-curricular needs and interests of the University community by utilizing the Campus
+                    Center Complex (Campus Center, Hemenway Hall and the Warrior Recreation Center) as the
+                    primary venue for programs and events to create an environment where individuals can
+                    come and relax, study and be entertained or challenged. Campus Center Complex affects
+                    the quality of life on campus by the variety of co-curricular programs it provides.
+                    <br /><br />
+                    Please come and visit us!!!
+                </p>
+            </div>
+            <div class="column">
+                <img class="ui centered image" src="https://www.hawaii.edu/campuscenter/slideimages/1.JPG"
+                     alt="UH Manoa Campus Center" style="border: 0;">
+            </div>
+        </div>
+        <div align="center">
+            <h1 class="ui huge header">UH Manoa One Card</h1>
+        </div>
+        <div class="ui two column grid">
+            <div class="column">
+                <p>
+                    Campus Center Complex is the student union of the University of Hawai`i at Manoa.
+                    <br /><br />
+                    The student union offers the university community and the public a wide variety
+                    of meeting, dining and entertainment options to enrich campus life and the educational
+                    experience. Campus Center, located in the heart of the University, strives to meet the
+                    co-curricular needs and interests of the University community by utilizing the Campus
+                    Center Complex (Campus Center, Hemenway Hall and the Warrior Recreation Center) as the
+                    primary venue for programs and events to create an environment where individuals can
+                    come and relax, study and be entertained or challenged. Campus Center Complex affects
+                    the quality of life on campus by the variety of co-curricular programs it provides.
+                    <br /><br />
+                    Please come and visit us!!!
+                </p>
+            </div>
+            <div class="column">
+                <img class="ui centered image" src="https://www.hawaii.edu/campuscenter/slideimages/1.JPG"
+                     alt="UH Manoa Campus Center" style="border: 0;">
+            </div>
         </div>
     </div>
+   
+
 </body>
 </html>
-<script>
-    /*
-        HTTML Section done by Kain Yogi
-        Script section done by Jeffrey Suen, assisted by Kain Yogi for makeGroups()
-    */
-
-    /*    
-    *   This function first takes the json file and randomizes the order into an array. It then calls the groupify function
-    *   on the randomized set then displays the groups.
-    */
-    function makeGroups() {
-        var input;
-        var groupsize = parseInt(document.getElementById("size").value);
-        input = json[0].data;
-        shuffle(input);
-
-        var output = groupify(input, groupsize);
-        var row = "";
-        for (var i = 0; i < output.length; i++) {
-            row += "<tr>\n<td>" + "Group " + (i + 1) + "</td><td>";
-            for (var j = 0; j < output[i].length; j++) {
-                row += output[i][j].name + " (" + output[i][j].username + "), ";
-            }
-            row += "</td>\n</tr>" + "\n";
-            $("#groups").html(row);
-        }
-    }
-    
-    // This function is used to shuffle the array of name-username pairs within the json data set
-    function shuffle(input) {
-        var temp, j;
-        for (var i = input.length - 1; i > 0; i--) {
-            j = Math.floor(Math.random() * (i + 1));
-            temp = input[i];
-            input[i] = input[j];
-            input[j] = temp;
-        }
-        return input;
-    }
-    
-    
-    // This function splices the randomly shuffled set (input) into groups of size (size)
-    function groupify(input, size) {
-        var groups = []; 
-        for (var i = 0; i < input.length; i += size) {
-           var splicedGroup = input.slice(i, i + size);
-            groups.push(splicedGroup);
-        }
-        return groups;
-    }
-
-</script>
