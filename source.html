@@ -1,0 +1,610 @@
+<html><!-- InstanceBegin template="/Templates/indextemplate.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<!-- InstanceBeginEditable name="doctitle" -->
+
+<title>University of Hawaii at Manoa Campus Center</title>
+
+<!-- InstanceEndEditable -->
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<style type="text/css">
+
+#dropmenudiv{
+position:absolute;
+border:1px solid black;
+border-bottom-width: 0;
+font:normal 9px Verdana;
+line-height:18px;
+z-index:10000;
+}
+
+#dropmenudiv a{
+width: 100%;
+display: block;
+text-indent: 3px;
+border-bottom: 1px solid black;
+padding: 1px 0;
+text-decoration: none;
+font-weight: regular;
+}
+
+#dropmenudiv a:hover{ /*hover background color*/
+background-color: CCFF00;
+}
+
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+}
+</style>
+
+<script type="text/javascript">
+
+/***********************************************
+* AnyLink Drop Down Menu- © Dynamic Drive (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+//Contents for menu 1
+var menu1=new Array()
+menu1[0]='<a href="http://www.hawaii.edu/campuscenter/services/clab.html">Computer Lab & Lounge</a>'
+menu1[1]='<a href="http://www.hawaii.edu/campuscenter/services/me.html">Meeting & Event Services</a>'
+menu1[2]='<a href="http://www.hawaii.edu/campuscenter/services/tid.html">Ticket, Information & ID</a>'
+menu1[3]='<a href="http://www.hawaii.edu/campuscenter/services/mg.html">Graphics</a>'
+menu1[4]='<a href="http://www.hawaii.edu/campuscenter/services/facilities.html">Student Life Facilities</a>'
+menu1[5]='<a href="http://www.uhmdining.com/">Manoa Dining Services</a>'
+
+//Contents for menu 2, and so on
+var menu2=new Array()
+menu2[00]='<a href="http://www.hawaii.edu/campuscenter/vendors/alohafresh.html">Simply to Go</a>'
+menu2[01]='<a href="http://www.hawaii.edu/campuscenter/vendors/americansavings.html">American Savings Bank</a>'
+menu2[02]='<a href="http://www.hawaii.edu/campuscenter/vendors/atms.html">ATMs</a>'
+menu2[03]='<a href="http://www.hawaii.edu/campuscenter/vendors/bale.html">BaLe</a>'
+menu2[04]='<a href="http://www.hawaii.edu/campuscenter/vendors/sf.html">Stir Fresh</a>'
+menu2[05]='<a href="https://uhm.sodexomyway.com/dining-near-me/cc-food-court">Campus Center Food Court</a>'
+menu2[06]='<a href="http://www.hawaii.edu/campuscenter/vendors/jamba.html">Jamba Juice</a>'
+menu2[07]='<a href="http://www.hawaii.edu/campuscenter/vendors/starbucks.html">Starbucks</a>'
+menu2[08]='<a href="http://www.hawaii.edu/campuscenter/vendors/subway.html">Subway</a>'
+menu2[09]='<a href="http://www.hawaii.edu/campuscenter/vendors/pizza.html">Pizza Hut Express</a>'
+menu2[10]='<a href="http://www.hawaii.edu/campuscenter/vendors/market.html">The Market at Campus Center</a>'
+menu2[11]='<a href="https://www.bookstore.hawaii.edu/manoa/">UH Bookstore</a>'
+menu2[12]='<a href="http://www.hawaii.edu/campuscenter/vendors/retail.html">Retail</a>'
+menu2[13]='<a href="http://www.hawaii.edu/campuscenter/vendors/uhfcu.html">UH Federal Credit Union</a>'
+
+
+
+
+//Contents for menu 3, and so on
+var menu3=new Array()
+menu3[00]='<a href="http://www2.hawaii.edu/%7easuh/">Associated Students of University of Hawaii</a>'
+menu3[01]='<a href="http://www.hawaii.edu/ccb/">Campus Center Board</a>'
+menu3[02]='<a href="http://www2.hawaii.edu/%7eccbac/">Activities Council</a>'
+menu3[03]='<a href="http://www.facebook.com/RecSportsBoard">Recreational Sports Council</a>'
+menu3[04]='<a href="http://www.manoanow.org/smb/">Student Media Board</a>'
+menu3[05]='<a href="http://hawaiireview.org/">Hawaii Review</a>'
+menu3[06]='<a href="http://www.kaleo.org/">Kaleo Newspaper</a>'
+menu3[07]='<a href="http://www.ktuh.org">90.1 KTUH Radio</a>'
+menu3[08]='<a href="http://gso.hawaii.edu/">Graduate Student Organization</a>'
+menu3[09]='<a href="https://manoa.hawaii.edu/sapfb/">Student Activity & Program Fee Board</a>'
+menu3[10]='<a href="http://www.manoa.hawaii.edu/studentlife/studentorg/rio.php">Registered Independent Organizations</a>'
+menu3[11]='<a href="http://www.manoanow.org/uhpro/">UH Productions</a>'
+
+//Contents for menu 4, and so on
+var menu4=new Array()
+menu4[00]='<a href="http://www.hawaii.edu/campuscenter/contact.html">Contact Info</a>'
+menu4[01]='<a href="https://myuh.hawaii.edu/">MyUH Services</a>'
+menu4[02]='<a href="http://www.studentaffairs.manoa.hawaii.edu/">Office of Student Affairs</a>'
+menu4[03]='<a href="http://manoa.hawaii.edu/careercenter/">Manoa Career Center</a>'
+menu4[04]='<a href="http://gmail.hawaii.edu">UH Mail</a>'
+menu4[05]='<a href="http://www.hawaii.edu/">University of Hawaii Homepage</a>'
+menu4[06]='<a href="http://www.hawaii.edu/campuscenter/floorlayout.html">CC Floor Layout</a>'
+menu4[07]='<a href="http://manoa.hawaii.edu/studentlife/">Student Life and Development</a>'
+menu4[08]='<a href="http://manoa.hawaii.edu/housing/">Student Housing Services</a>'
+menu4[09]='<a href="http://manoa.hawaii.edu/studentrec/">Student Recreation Services</a>'
+
+
+		
+var menuwidth='250px' //default menu width
+var menubgcolor='white'  //menu bgcolor
+var disappeardelay=250  //menu disappear speed onMouseout (in miliseconds)
+var hidemenu_onclick="yes" //hide menu when user clicks within menu?
+
+/////No further editting needed
+
+var ie4=document.all
+var ns6=document.getElementById&&!document.all
+
+if (ie4||ns6)
+document.write('<div id="dropmenudiv" style="visibility:hidden;width:'+menuwidth+';background-color:'+menubgcolor+'" onMouseover="clearhidemenu()" onMouseout="dynamichide(event)"></div>')
+
+function getposOffset(what, offsettype){
+var totaloffset=(offsettype=="left")? what.offsetLeft : what.offsetTop;
+var parentEl=what.offsetParent;
+while (parentEl!=null){
+totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+parentEl=parentEl.offsetParent;
+}
+return totaloffset;
+}
+
+
+function showhide(obj, e, visible, hidden, menuwidth){
+if (ie4||ns6)
+dropmenuobj.style.left=dropmenuobj.style.top="-500px"
+if (menuwidth!=""){
+dropmenuobj.widthobj=dropmenuobj.style
+dropmenuobj.widthobj.width=menuwidth
+}
+if (e.type=="click" && obj.visibility==hidden || e.type=="mouseover")
+obj.visibility=visible
+else if (e.type=="click")
+obj.visibility=hidden
+}
+
+function iecompattest(){
+return (document.compatMode && document.compatMode!="BackCompat")? document.documentElement : document.body
+}
+
+function clearbrowseredge(obj, whichedge){
+var edgeoffset=0
+if (whichedge=="rightedge"){
+var windowedge=ie4 && !window.opera? iecompattest().scrollLeft+iecompattest().clientWidth-15 : window.pageXOffset+window.innerWidth-15
+dropmenuobj.contentmeasure=dropmenuobj.offsetWidth
+if (windowedge-dropmenuobj.x < dropmenuobj.contentmeasure)
+edgeoffset=dropmenuobj.contentmeasure-obj.offsetWidth
+}
+else{
+var topedge=ie4 && !window.opera? iecompattest().scrollTop : window.pageYOffset
+var windowedge=ie4 && !window.opera? iecompattest().scrollTop+iecompattest().clientHeight-15 : window.pageYOffset+window.innerHeight-18
+dropmenuobj.contentmeasure=dropmenuobj.offsetHeight
+if (windowedge-dropmenuobj.y < dropmenuobj.contentmeasure){ //move up?
+edgeoffset=dropmenuobj.contentmeasure+obj.offsetHeight
+if ((dropmenuobj.y-topedge)<dropmenuobj.contentmeasure) //up no good either?
+edgeoffset=dropmenuobj.y+obj.offsetHeight-topedge
+}
+}
+return edgeoffset
+}
+
+function populatemenu(what){
+if (ie4||ns6)
+dropmenuobj.innerHTML=what.join("")
+}
+
+
+function dropdownmenu(obj, e, menucontents, menuwidth){
+if (window.event) event.cancelBubble=true
+else if (e.stopPropagation) e.stopPropagation()
+clearhidemenu()
+dropmenuobj=document.getElementById? document.getElementById("dropmenudiv") : dropmenudiv
+populatemenu(menucontents)
+
+if (ie4||ns6){
+showhide(dropmenuobj.style, e, "visible", "hidden", menuwidth)
+dropmenuobj.x=getposOffset(obj, "left")
+dropmenuobj.y=getposOffset(obj, "top")
+dropmenuobj.style.left=dropmenuobj.x-clearbrowseredge(obj, "rightedge")+"px"
+dropmenuobj.style.top=dropmenuobj.y-clearbrowseredge(obj, "bottomedge")+obj.offsetHeight+"px"
+}
+
+return clickreturnvalue()
+}
+
+function clickreturnvalue(){
+if (ie4||ns6) return false
+else return true
+}
+
+function contains_ns6(a, b) {
+while (b.parentNode)
+if ((b = b.parentNode) == a)
+return true;
+return false;
+}
+
+function dynamichide(e){
+if (ie4&&!dropmenuobj.contains(e.toElement))
+delayhidemenu()
+else if (ns6&&e.currentTarget!= e.relatedTarget&& !contains_ns6(e.currentTarget, e.relatedTarget))
+delayhidemenu()
+}
+
+function hidemenu(e){
+if (typeof dropmenuobj!="undefined"){
+if (ie4||ns6)
+dropmenuobj.style.visibility="hidden"
+}
+}
+
+function delayhidemenu(){
+if (ie4||ns6)
+delayhide=setTimeout("hidemenu()",disappeardelay)
+}
+
+function clearhidemenu(){
+if (typeof delayhide!="undefined")
+clearTimeout(delayhide)
+}
+
+if (hidemenu_onclick=="yes")
+document.onclick=hidemenu
+
+</script>
+<!-- InstanceBeginEditable name="head" -->
+
+<link href="main.css" rel="stylesheet" type="text/css" />
+<style type="text/css">
+
+<!--
+
+.style1 {font-size: 10px}
+
+hr {
+
+	border: 1px dotted #333333;
+
+}
+
+.newssub {
+
+	font-size: 9px;
+
+}
+
+.style2 {font-size: 12px}
+
+.flash {
+
+	z-index: -10000000;
+
+	position: static;
+
+}
+
+.style6 {font-size: 9px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.style12 {
+
+	font-size: 16px;
+
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+}
+
+.style15 {font-size: 12px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+.style16 {color: #FF0000}
+
+.style17 {font-size: 15px; }
+
+-->
+
+</style>
+
+<style type="text/css">
+
+<!--
+
+.style1 {font-size: 10px}
+
+hr {
+
+	border: 1px dotted #333333;
+
+}
+
+.newssub {
+
+	font-size: 9px;
+
+}
+
+.style2 {font-size: 12px}
+
+.flash {
+
+	z-index: -10000000;
+
+	position: static;
+
+}
+
+.style6 {font-size: 9px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+
+
+
+.style17 {	font-family: Verdana, Arial, Helvetica, sans-serif;
+
+	font-size: 10px;
+
+}
+
+.style17 {font-size: 10px}
+
+.eventname {font-size: 9px; font-weight: bold; }
+
+.style76 {color: #DDDDDD; font-size: 24px;}
+
+.style79 {font-family: Verdana, Arial, Helvetica, sans-serif}
+
+.style96 {
+
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+
+	color: #006666;
+
+}
+.style97 {
+	color: #006633;
+	font-weight: bold;
+}
+.style111 {font-size: 12px; color: #000000; }
+.style126 {
+	font-size: 13px;
+	color: #FF0000;
+	font-weight: bold;
+}
+.style129 {font-size: 12px}
+.style129 {font-size: 12px}
+.style135 {color: #006600; font-size: 15px; font-weight: bold; }
+.style142 {font-size: 18px; color: #FF0000; font-weight: bold; }
+.style150 {
+	font-size: 13px;
+	color: #006633;
+	font-weight: bold;
+}
+.style151 {font-size: 16px}
+.style157 {font-size: 13px; color: #FF00FF; font-weight: bold; }
+
+-->
+
+</style>
+
+<!-- InstanceEndEditable -->
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- ImageReady Slices (layout 1a.psd) -->
+<table width="800" height="231" border="0" align="center" cellpadding="0" cellspacing="0" id="Table_01">
+	<tr>
+		<td rowspan="3">
+			<img src="images/index_01.gif" width="6" height="231" alt=""></td>
+		<td colspan="8">
+			<img src="images/header.gif" width="789" height="185" alt=""></td>
+		<td rowspan="3">
+			<img src="images/index_03.gif" width="5" height="231" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="images/index_04.gif" width="1" height="46" alt=""></td>
+		<td>
+			<a href="http://www.hawaii.edu/campuscenter/">
+				<img src="images/center.gif" width="148" height="35" border="0" alt=""></a></td>
+		<td>
+			<a href="" onClick="return clickreturnvalue(http://www.hawaii.edu/campuscenter/test/services/services.html)" onMouseover="dropdownmenu(this, event, menu1, '150px')" onMouseout="delayhidemenu()">
+				<img src="images/services.gif" width="165" height="35" border="0" alt=""></a></td>
+		<td>
+<a href="Templates/vendors.html" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu2, '150px')" onMouseout="delayhidemenu()">
+				<img src="images/vendors.gif" width="160" height="35" border="0" alt=""></a></td>
+		<td rowspan="2">
+			<img src="images/index_08.gif" width="1" height="46" alt=""></td>
+		<td>
+<a href="Templates/organizations.html" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu3, '150px')" onMouseout="delayhidemenu()">
+				<img src="images/organizations.gif" width="199" height="35" border="0" alt=""></a></td>
+		<td>
+			<a href="Templates/links.html" onClick="return clickreturnvalue()" onMouseover="dropdownmenu(this, event, menu4, '150px')" onMouseout="delayhidemenu()"><img src="images/links.gif" alt="" width="114" height="35" border="0"></a></td>
+		<td rowspan="2">
+			<img src="images/index_11.gif" width="1" height="46" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="3">
+			<img src="images/index_12.gif" width="473" height="11" alt=""></td>
+		<td colspan="2">
+			<img src="images/index_13.gif" width="313" height="11" alt=""></td>
+	</tr>
+</table>
+<!-- InstanceBeginEditable name="content" -->
+
+<table width="800" border="0" align="center" cellpadding="0" cellspacing="0">
+
+  <!--DWLayoutTable-->
+
+  <tr>
+
+    <td colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+      <!--DWLayoutTable-->
+
+      <tr>
+
+        <td width="545" height="47"><img src="welcome.jpg" width="295" height="75" /></td>
+
+
+
+      </tr>
+
+    </table>      <table border="0" cellpadding="0" cellspacing="0">
+
+        <!--DWLayoutTable-->
+
+        <tr>
+
+          <td height="228" colspan="2" align="left" valign="top"><div align="justify">
+
+            <p align="justify"><font class="info style1" align="justify"><span class="style111">Campus Center Complex is the student union of the University of Hawai`i at Manoa.</span></font></p>
+            <p align="justify" style="margin-bottom: 0;"><font class="info style1" align="justify"><span class="style2">The student union offers the university community and the public a wide variety of meeting, dining and entertainment options to enrich campus life and the educational experience. Campus Center, located in the heart of the University, strives to meet the co-curricular needs and interests of the University community by utilizing the Campus Center Complex (Campus Center, Hemenway Hall and the Warrior Recreation Center) as the primary venue for programs and events to create an environment where individuals can come and relax, study and be entertained or challenged.  Campus Center Complex affects the quality of life on campus by the variety of co-curricular programs it provides. Please come and visit us!!!<br>
+    
+          </span></font></p>
+          </div></td>
+
+          <td width="402" align="center" valign="middle"><p><img src="slideimages/1.JPG" width="300" height="228"></p>          </td>
+
+        </tr>
+
+        <tr>
+
+          <td width="393" height="670" align="center" valign="top"><table width="730" border="0" cellpadding="5" background="newsbg.jpg" class="news">
+
+            <!--DWLayoutTable-->
+
+            <tr>
+
+              <td width="716" align="center" valign="top"><div align="center">
+                <table width="100%" border="0" cellspacing="0" cellpadding="8">
+
+                      <tr>
+
+                        <td align="left" valign="top" bgcolor="#FFFFFF"><hr>
+                          <p class="style16" style="margin-top: 0"><strong>Campus Center is Open during renovation!&nbsp; Find your favorite place for food, services or just to hang out!&nbsp; </strong></p>
+                          <hr>
+<p class="style135" style="margin-top: 0;">CC Computer Lab now accepts Campus Cash for all your printing and copying needs.&nbsp; Use your Manoa One Card as payment.&nbsp; </p>
+<hr><p><span class="style135">Looking for a computer to register or pay your fees?</span><span class="style150">&nbsp;</span> <span class="newsinfo">Need a place to rest with great views of the Campus Center Courtyard?&nbsp; <span class="style151">Campus Center Computer Lab and Lounge</span> located on the 3rd floor is just the place for you. For more information:&nbsp; <a href="services/clab.html">Campus Center Computer Lab</a></span></p>
+<hr>                          <p class="style135" style="margin-bottom: 0;">Make the most of your UH ID card.&nbsp; For all incoming students, faculty and staff, access your account online via eAccounts.&nbsp; </p>
+                          <p class="style135" style="margin-top: 0;">Click here for the Manoa One Card page: <a href="http://www.manoa.hawaii.edu/onecard/">http://www.manoa.hawaii.edu/onecard/</a></p>
+                                                    <hr>
+<p style="margin-top: 0;"><span class="style97">One stop shop for your meeting and event services - rooms, </span><span class="style97">catering and technical support.</span>&nbsp; <span class="info">Reserve space for your special event online</span>.&nbsp;</p>
+<table width="335" cellpadding="0" cellspacing="0">
+
+                            <tr>
+
+                              <td width="321" height="54" align="left" valign="top" bgcolor="#ffffff"><p align="center" class="style17" style="margin-top:0;"><strong><span style="color:#000000;"><span class="style12"><span style="color:#339933;"><strong>Meeting and Event Services</strong></span><span style="color:#DDDDDD;"><span style="color:#DDDDDD;"><span style="color:#006666;"><strong><span style="color:#333333;"><br>
+                              </span></strong></span></span></span><strong><a href="services/me.html" class="style129">&gt;&gt;Reserve Your Space Now</a></strong></span></span></strong></p>
+                              </td>
+
+                            </tr>
+
+                          </table>
+                          <hr>
+
+                        <p align="center" style="margin-top: 0"><a href="jobops.html"><img src="jobops.jpg" border="0"></a></p></td>
+                      </tr>
+
+                    </table>
+
+                </div></td>
+
+              </tr>
+
+          </table>          
+          </td>
+
+
+
+
+          <td colspan="2" align="center" valign="top"><table width="380" border="0" cellpadding="5" background="newsbg.jpg" class="news">
+
+            <!--DWLayoutTable-->
+
+            <tr>
+
+             <td width="366" height="666" align="center" valign="top"><div align="center">
+
+                <p class="newstitle style15" style="margin-bottom: 0">CALENDAR OF EVENTS </p>
+
+                    <table width="100%" border="0" cellspacing="0" cellpadding="8">
+
+                      <tr>
+
+                      </tr></table>
+
+
+
+               
+
+                    <table width="100%" height="192%" border="0" cellpadding="8" cellspacing="0">
+
+                  <tr>
+
+                    <td height="843" align="left" valign="top" bgcolor="#FFFFFF"><p align="center" class="style142">&nbsp;</p>
+                      <p style="margin-bottom: 0;">&nbsp;</p>
+<p align="center" class="style157" style="margin-top: 0; margin-bottom: 0;">For Spring 2020 Event Schedule:&nbsp; </p>
+<p align="center" class="style126" style="margin-top: 0;"><a href="http://uhmccbac.weebly.com/schedule-of-events.html">Campus Center Board Activities Council</a></p>
+<p>&nbsp;</p>
+<p align="center" class="style16">&nbsp; </p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="margin-bottom: 0;">&nbsp;</p>
+<p style="margin-top: 0">&nbsp;</p>
+</td>
+                  </tr>
+
+                  <tr>
+
+                    <td height="275" align="left" valign="top" bgcolor="#FFFFFF"><p align="center" style="margin-bottom: 0">&nbsp;</p>
+                      </td> 
+                  </tr>
+
+
+
+                    
+
+                    <tr>
+
+                      <td height="94" align="left" valign="top" bgcolor="#FFFFFF">                        
+                        <p><span class="style79"><span class="style76"><span class="style16"><span class="style96"></span></span></span></span></p></td></tr>
+
+                
+
+              </div>
+                </table></td>
+
+              </tr>
+
+          </table>            
+
+        </td></tr>
+
+        <tr>
+
+          <td></td>
+
+
+
+        </tr>
+
+        
+
+        
+
+    </table></td>
+
+  </tr>
+
+  
+
+  <tr>
+
+    <td height="18" colspan="2" valign="top"><table width="100%" border="0" cellpadding="0" cellspacing="0">
+
+      <!--DWLayoutTable-->
+
+      <tr>
+
+        <td width="800" height="18"><div align="center">
+
+          <p class="style6" style="margin-bottom: 0">Site created by <a href="mailto:ccmg@hawaii.edu">Campus Center Marketing &amp; Graphics</a> </p>
+
+
+
+        </div>
+
+		<!-- Start of StatCounter Code -->
+
+<a href="http://www.statcounter.com/" target="_blank"><img src="http://c18.statcounter.com/counter.php?sc_project=1859822&amp;java=0&amp;security=d94ec874&amp;invisible=1" alt="free counter with statistics" border="0" /></a> 
+
+<!-- End of StatCounter Code --></td>
+
+      </tr>
+
+    </table></td>
+
+  </tr>
+
+</table>
+
+<!-- InstanceEndEditable -->
+<p>
+  <!-- End ImageReady Slices -->
+</p>
+</body>
+<!-- InstanceEnd --></html>
