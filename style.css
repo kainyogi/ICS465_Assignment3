@@ -4,10 +4,19 @@
   border: none;
 }
 .ui.borderless.middlemenu.menu {
-    background-color: lightgreen;
+    background-color: darkgreen;
     box-shadow: none;
     border: none;
 }
 .padding-top-reduction{
     padding-top: -20px;
+}
+.word-green{
+    color: green;
+    font-family:'Trebuchet MS',sans-serif;
+    font-weight: 900;
+}
+.footer-background {
+    background-color: darkgreen;
+    color: white;
 }
